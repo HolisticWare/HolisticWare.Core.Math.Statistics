@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HolisticWare.Core.Math.Statistics", "HolisticWare.Core.Math.Statistics\HolisticWare.Core.Math.Statistics.shproj", "{920D7D0F-3FAE-4C77-9174-23E7A4E80E50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.Math.Statistics.NetStandard10", "HolisticWare.Core.Math.Statistics.NetStandard10\HolisticWare.Core.Math.Statistics.NetStandard10.csproj", "{0FDC898E-8741-4788-B648-29D82717111C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FDC898E-8741-4788-B648-29D82717111C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FDC898E-8741-4788-B648-29D82717111C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FDC898E-8741-4788-B648-29D82717111C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FDC898E-8741-4788-B648-29D82717111C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
