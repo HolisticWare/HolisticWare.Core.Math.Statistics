@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.1</TargetFramework>
+    <RootNamespace>Core.Math.Statistics</RootNamespace>
+    <AssemblyName>HolisticWare.Core.Math.Statistics</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ValueTuple" Version="4.4.0" />
+    <PackageReference Include="System.Linq.Parallel" Version="4.3.0" />
+  </ItemGroup>
+  <Import Project="..\HolisticWare.Core.Math.Statistics\HolisticWare.Core.Math.Statistics.projitems" Label="Shared" Condition="Exists('..\HolisticWare.Core.Math.Statistics\HolisticWare.Core.Math.Statistics.projitems')" />
+</Project>
