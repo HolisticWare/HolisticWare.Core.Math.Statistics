@@ -25,6 +25,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.Frequency.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.StandardDeviationSample.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.VariancePopulation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.Mode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.MeanArithmetic.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.MeanGeometric.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)readme.md" />

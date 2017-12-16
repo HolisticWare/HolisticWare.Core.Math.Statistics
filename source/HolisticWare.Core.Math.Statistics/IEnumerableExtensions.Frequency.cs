@@ -11,9 +11,9 @@ namespace Core.Math.Statistics
     /// </summary>
     /// <see cref="https://en.wikipedia.org/wiki/Correlation_and_dependence"/> 
     /// <see cref="http://www.mathsisfun.com/data/correlation.html"/>
-    public static class IEnumerableExtensionsFrequency
+    public static class IEnumerableExtensionsFrequencies
     {
-        public static Dictionary<T, uint> Frequency<T>(this IEnumerable<T> x)
+        public static IEnumerable<KeyValuePair<T, uint>> Frequencies<T>(this IEnumerable<T> x)
         {
             long n = x.LongCount();
 
@@ -32,10 +32,16 @@ namespace Core.Math.Statistics
                 }
             }
 
-            return frequencies;
+            IEnumerable<KeyValuePair<T, uint>> frequencies_sorted =
+                from pair in frequencies
+                    orderby pair.Value descending
+                    select pair
+                    ;
+
+            return frequencies_sorted;
         }
 
-        public static Dictionary<ushort, uint> Frequency(this IEnumerable<ushort> x)
+        public static IEnumerable<KeyValuePair<ushort, uint>> Frequencies(this IEnumerable<ushort> x)
         {
             long n = x.LongCount();
 
@@ -54,10 +60,16 @@ namespace Core.Math.Statistics
                 }                
             }
 
-            return frequencies;
+            IEnumerable<KeyValuePair<ushort, uint>> frequencies_sorted =
+                from pair in frequencies
+                orderby pair.Value descending
+                select pair
+                    ;
+
+            return frequencies_sorted;
         }
 
-        public static Dictionary<short, uint> Frequency(this IEnumerable<short> x)
+        public static IEnumerable<KeyValuePair<short, uint>> Frequencies(this IEnumerable<short> x)
         {
             long n = x.LongCount();
 
@@ -76,10 +88,16 @@ namespace Core.Math.Statistics
                 }
             }
 
-            return frequencies;
+            IEnumerable<KeyValuePair<short, uint>> frequencies_sorted =
+                from pair in frequencies
+                orderby pair.Value descending
+                select pair
+                    ;
+
+            return frequencies_sorted;
         }
 
-        public static Dictionary<int, uint> Frequency(this IEnumerable<int> x)
+        public static IEnumerable<KeyValuePair<int, uint>> Frequencies(this IEnumerable<int> x)
         {
             long n = x.LongCount();
 
@@ -98,10 +116,16 @@ namespace Core.Math.Statistics
                 }
             }
 
-            return frequencies;
+            IEnumerable<KeyValuePair<int, uint>> frequencies_sorted =
+                from pair in frequencies
+                orderby pair.Value descending
+                select pair
+                    ;
+
+            return frequencies_sorted;
         }
 
-        public static Dictionary<uint, uint> Frequency(this IEnumerable<uint> x)
+        public static IEnumerable<KeyValuePair<uint, uint>> Frequencies(this IEnumerable<uint> x)
         {
             long n = x.LongCount();
 
@@ -120,10 +144,16 @@ namespace Core.Math.Statistics
                 }
             }
 
-            return frequencies;
+            IEnumerable<KeyValuePair<uint, uint>> frequencies_sorted =
+                from pair in frequencies
+                orderby pair.Value descending
+                select pair
+                    ;
+
+            return frequencies_sorted;
         }
 
-        public static Dictionary<long, uint> Frequency(this IEnumerable<long> x)
+        public static IEnumerable<KeyValuePair<long, uint>> Frequencies(this IEnumerable<long> x)
         {
             long n = x.LongCount();
 
@@ -142,10 +172,16 @@ namespace Core.Math.Statistics
                 }
             }
 
-            return frequencies;
+            IEnumerable<KeyValuePair<long, uint>> frequencies_sorted =
+                from pair in frequencies
+                orderby pair.Value descending
+                select pair
+                    ;
+
+            return frequencies_sorted;
         }
 
-        public static Dictionary<ulong, uint> Frequency(this IEnumerable<ulong> x)
+        public static IEnumerable<KeyValuePair<ulong, uint>> Frequencies(this IEnumerable<ulong> x)
         {
             long n = x.LongCount();
 
@@ -164,10 +200,16 @@ namespace Core.Math.Statistics
                 }
             }
 
-            return frequencies;
+            IEnumerable<KeyValuePair<ulong, uint>> frequencies_sorted =
+                from pair in frequencies
+                orderby pair.Value descending
+                select pair
+                    ;
+
+            return frequencies_sorted;
         }
 
-        public static Dictionary<float, uint> Frequency(this IEnumerable<float> x)
+        public static IEnumerable<KeyValuePair<float, uint>> Frequencies(this IEnumerable<float> x)
         {
             long n = x.LongCount();
 
@@ -186,10 +228,16 @@ namespace Core.Math.Statistics
                 }
             }
 
-            return frequencies;
+            IEnumerable<KeyValuePair<float, uint>> frequencies_sorted =
+                from pair in frequencies
+                orderby pair.Value descending
+                select pair
+                    ;
+
+            return frequencies_sorted;
         }
 
-        public static Dictionary<double, uint> Frequency(this IEnumerable<double> x)
+        public static IEnumerable<KeyValuePair<double, uint>> Frequencies(this IEnumerable<double> x)
         {
             long n = x.LongCount();
 
@@ -208,10 +256,16 @@ namespace Core.Math.Statistics
                 }
             }
 
-            return frequencies;
+            IEnumerable<KeyValuePair<double, uint>> frequencies_sorted =
+                from pair in frequencies
+                orderby pair.Value descending
+                select pair
+                    ;
+
+            return frequencies_sorted;
         }
 
-        public static Dictionary<decimal, uint> Frequency(this IEnumerable<decimal> x)
+        public static IEnumerable<KeyValuePair<decimal, uint>> Frequencies(this IEnumerable<decimal> x)
         {
             long n = x.LongCount();
 
@@ -230,7 +284,13 @@ namespace Core.Math.Statistics
                 }
             }
 
-            return frequencies;
+            IEnumerable<KeyValuePair<decimal, uint>> frequencies_sorted =
+                from pair in frequencies
+                orderby pair.Value descending
+                select pair
+                    ;
+
+            return frequencies_sorted;
         }
     }
 }

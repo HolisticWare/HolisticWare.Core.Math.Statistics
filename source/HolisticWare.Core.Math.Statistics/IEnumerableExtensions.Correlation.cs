@@ -23,6 +23,10 @@ namespace Core.Math.Statistics
             double sum_y_pow_2 = 0.0;
             double sum_product_x_y = 0.0;
 
+            #if NETSTANDARD1_0
+            #elif NETSTANDARD1_1
+            #endif
+
             for (int i = 0; i < n; i++)
             {
                 double x_i = x.ElementAt(i);
@@ -32,7 +36,7 @@ namespace Core.Math.Statistics
                 sum_y += y_i;
                 sum_x_pow_2 += x_i * x_i;
                 sum_y_pow_2 += y_i * y_i;
-                sum_product_x_y +=  x_i * y_i;
+                sum_product_x_y += x_i * y_i;
             }
 
             double correlation =
@@ -62,8 +66,16 @@ namespace Core.Math.Statistics
                 sum += x.ElementAt(i) * y.ElementAt(i);
             }
 
+            #if NETSTANDARD1_0
+            double x_mean_average_arithmetic = x.Cast<int>().Average();
+            double y_mean_average_arithmetic = y.Cast<int>().Average();
+            #elif NETSTANDARD1_1
+            double x_mean_average_arithmetic = x.AsParallel().Cast<int>().Average();
+            double y_mean_average_arithmetic = y.AsParallel().Cast<int>().Average();
+            #endif
+
             return 
-                (sum - n * x.Cast<int>().Average() * y.Cast<int>().Average()) 
+                (sum - n * x_mean_average_arithmetic * y_mean_average_arithmetic) 
                 / 
                 ((n - 1) * standard_deviation_x * standard_deviation_y)
                 ;
@@ -83,9 +95,17 @@ namespace Core.Math.Statistics
                 sum += x.ElementAt(i) * y.ElementAt(i);
             }
 
-            return 
-                (sum - n * x.Cast<int>().Average() * y.Cast<int>().Average()) 
-                / 
+            #if NETSTANDARD1_0
+            double x_mean_average_arithmetic = x.Cast<long>().Average();
+            double y_mean_average_arithmetic = y.Cast<long>().Average();
+            #elif NETSTANDARD1_1
+            double x_mean_average_arithmetic = x.AsParallel().Cast<long>().Average();
+            double y_mean_average_arithmetic = y.AsParallel().Cast<long>().Average();
+            #endif
+
+            return
+                (sum - n * x_mean_average_arithmetic * y_mean_average_arithmetic)
+                /
                 ((n - 1) * standard_deviation_x * standard_deviation_y)
                 ;
         }
@@ -104,9 +124,17 @@ namespace Core.Math.Statistics
                 sum += x.ElementAt(i) * y.ElementAt(i);
             }
 
-            return 
-                (sum - n * x.Average() * y.Average()) 
-                / 
+            #if NETSTANDARD1_0
+            double x_mean_average_arithmetic = x.Average();
+            double y_mean_average_arithmetic = y.Average();
+            #elif NETSTANDARD1_1
+            double x_mean_average_arithmetic = x.AsParallel().Average();
+            double y_mean_average_arithmetic = y.AsParallel().Average();
+            #endif
+
+            return
+                (sum - n * x_mean_average_arithmetic * y_mean_average_arithmetic)
+                /
                 ((n - 1) * standard_deviation_x * standard_deviation_y)
                 ;
         }
@@ -125,9 +153,18 @@ namespace Core.Math.Statistics
                 sum += x.ElementAt(i) * y.ElementAt(i);
             }
 
-            return 
-                (sum - n * x.Cast<long>().Average() * y.Cast<long>().Average()) 
-                / 
+            #if NETSTANDARD1_0
+            double x_mean_average_arithmetic = x.Cast<long>().Average();
+            double y_mean_average_arithmetic = y.Cast<long>().Average();
+            #elif NETSTANDARD1_1
+            double x_mean_average_arithmetic = x.AsParallel().Cast<long>().Average();
+            double y_mean_average_arithmetic = y.AsParallel().Cast<long>().Average();
+            #endif
+
+
+            return
+                (sum - n * x_mean_average_arithmetic * y_mean_average_arithmetic)
+                /
                 ((n - 1) * standard_deviation_x * standard_deviation_y)
                 ;
         }
@@ -146,11 +183,19 @@ namespace Core.Math.Statistics
                 sum += x.ElementAt(i) * y.ElementAt(i);
             }
 
-            return 
-                (sum - n * x.Average() * y.Average()) 
-                / 
+            #if NETSTANDARD1_0
+            double x_mean_average_arithmetic = x.Average();
+            double y_mean_average_arithmetic = y.Average();
+            #elif NETSTANDARD1_1
+            double x_mean_average_arithmetic = x.AsParallel().Average();
+            double y_mean_average_arithmetic = y.AsParallel().Average();
+            #endif
+
+            return
+                (sum - n * x_mean_average_arithmetic * y_mean_average_arithmetic)
+                /
                 ((n - 1) * standard_deviation_x * standard_deviation_y)
-                ;
+                ;        
         }
 
         public static double Correlation(this IEnumerable<ulong> x, IEnumerable<ulong> y)
@@ -167,11 +212,19 @@ namespace Core.Math.Statistics
                 sum += x.ElementAt(i) * y.ElementAt(i);
             }
 
-            return 
-                (sum - n * x.Cast<double>().Average() * y.Cast<double>().Average()) 
-                / 
+            #if NETSTANDARD1_0
+            double x_mean_average_arithmetic = x.Cast<double>().Average();
+            double y_mean_average_arithmetic = y.Cast<double>().Average();
+            #elif NETSTANDARD1_1
+            double x_mean_average_arithmetic = x.AsParallel().Cast<double>().Average();
+            double y_mean_average_arithmetic = y.AsParallel().Cast<double>().Average();
+            #endif
+
+            return
+                (sum - n * x_mean_average_arithmetic * y_mean_average_arithmetic)
+                /
                 ((n - 1) * standard_deviation_x * standard_deviation_y)
-                ;
+                ;        
         }
 
         public static double Correlation(this IEnumerable<double> x, IEnumerable<double> y)
@@ -188,11 +241,19 @@ namespace Core.Math.Statistics
                 sum += x.ElementAt(i) * y.ElementAt(i);
             }
 
-            return 
-                (sum - n * x.Average() * y.Average()) 
-                / 
+            #if NETSTANDARD1_0
+            double x_mean_average_arithmetic = x.Average();
+            double y_mean_average_arithmetic = y.Average();
+            #elif NETSTANDARD1_1
+            double x_mean_average_arithmetic = x.AsParallel().Average();
+            double y_mean_average_arithmetic = y.AsParallel().Average();
+            #endif
+
+            return
+                (sum - n * x_mean_average_arithmetic * y_mean_average_arithmetic)
+                /
                 ((n - 1) * standard_deviation_x * standard_deviation_y)
-                ;            
+                ;        
         }
 
         public static decimal Correlation(this IEnumerable<decimal> x, IEnumerable<decimal> y)

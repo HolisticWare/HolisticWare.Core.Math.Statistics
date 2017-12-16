@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.0</TargetFramework>
-    <RootNamespace>HolisticWare.Core.Math.Statistics</RootNamespace>
+    <RootNamespace>Core.Math.Statistics</RootNamespace>
     <AssemblyName>HolisticWare.Core.Math.Statistics</AssemblyName>
   </PropertyGroup>
 
