@@ -24,10 +24,13 @@
 		http://semver.org/
 		-->
 		<version>
-			0.0.1.0
+			2017.012.16.0
 		</version>
 		<releaseNotes>
 			Mathematical Utiltities - Statistics implementation
+
+			Functionality Added - MeanArithmetic, MeanGeometric, Mode
+			Platform Added - .NET Standard 1.1 and Parallel Linq algorithms!
 		</releaseNotes>
 		<licenseUrl>
 			https://github.com/moljac/HolisticWare.Core.Math.Statistics/blob/master/LICENSE
@@ -45,6 +48,7 @@
 			Xplat (cross platform) implementation of Statistics algorithms
 
 			.NET Standard 1.0 (netstandard1.0)
+			.NET Standard 1.1 (netstandard1.1) with Parallel Linq algorithms
 		</description>
 		<summary>
 			Mathematical Utiltities - Statistics implementation
@@ -109,6 +113,12 @@
 			target="lib/netstandard1.0/HolisticWare.Core.Math.Statistics.dll"
 			>
 		</file>
+		<file
+			src="output/netstandard1.1/HolisticWare.Core.Math.Statistics.dll"
+			target="lib/netstandard1.1/HolisticWare.Core.Math.Statistics.dll"
+			>
+		</file>
+
 
 		<!--
 			Xamarin.Android
