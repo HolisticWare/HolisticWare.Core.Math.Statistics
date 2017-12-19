@@ -1,15 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HolisticWare.Core.Math.Statistics", "HolisticWare.Core.Math.Statistics\HolisticWare.Core.Math.Statistics.shproj", "{920D7D0F-3FAE-4C77-9174-23E7A4E80E50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.Math.Statistics.NetStandard10", "HolisticWare.Core.Math.Statistics.NetStandard10\HolisticWare.Core.Math.Statistics.NetStandard10.csproj", "{0FDC898E-8741-4788-B648-29D82717111C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.Core.Math.Statistics.NetStandard10", "HolisticWare.Core.Math.Statistics.NetStandard10\HolisticWare.Core.Math.Statistics.NetStandard10.csproj", "{0FDC898E-8741-4788-B648-29D82717111C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.Math.Statistics.NetStandard11", "HolisticWare.Core.Math.Statistics.NetStandard11\HolisticWare.Core.Math.Statistics.NetStandard11.csproj", "{3C91DD3D-42EE-4872-A48F-315AC22781E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.Core.Math.Statistics.NetStandard11", "HolisticWare.Core.Math.Statistics.NetStandard11\HolisticWare.Core.Math.Statistics.NetStandard11.csproj", "{3C91DD3D-42EE-4872-A48F-315AC22781E5}"
 EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		HolisticWare.Core.Math.Statistics\HolisticWare.Core.Math.Statistics.projitems*{920d7d0f-3fae-4c77-9174-23e7a4e80e50}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -23,5 +26,11 @@ Global
 		{3C91DD3D-42EE-4872-A48F-315AC22781E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C91DD3D-42EE-4872-A48F-315AC22781E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C91DD3D-42EE-4872-A48F-315AC22781E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {89A9F339-8255-4BEB-A33A-A47C861F26E0}
 	EndGlobalSection
 EndGlobal
