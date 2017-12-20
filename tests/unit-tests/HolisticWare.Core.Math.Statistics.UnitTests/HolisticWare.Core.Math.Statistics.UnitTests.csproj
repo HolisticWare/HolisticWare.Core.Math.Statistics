@@ -31,9 +31,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Test.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -41,6 +38,11 @@
       <Project>{0FDC898E-8741-4788-B648-29D82717111C}</Project>
       <Name>HolisticWare.Core.Math.Statistics.NetStandard10</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Test copy.cs" />
+    <Compile Include="FrequenciesTests.cs" />
+    <Compile Include="MeanAverageTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
