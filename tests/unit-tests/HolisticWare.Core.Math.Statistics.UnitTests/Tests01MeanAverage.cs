@@ -35,7 +35,7 @@ using Core.Math.Statistics;
 
 namespace UnitTests.HolisticWare.Core.Math.Statistics
 {
-    public partial class MeanAverageTests
+    public partial class Tests01MeanAverage
     {
         
         [Test()]

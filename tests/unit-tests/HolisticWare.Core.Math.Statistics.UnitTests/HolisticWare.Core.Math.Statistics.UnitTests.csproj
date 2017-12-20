@@ -27,20 +27,46 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+      <HintPath>..\packages\NUnit.3.9.0\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Test.cs" />
+    <Compile Include="Tests01MeanAverage.cs" />
+    <Compile Include="Tests02Frequencies.cs" />
+    <Compile Include="Tests03Mode.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\source\HolisticWare.Core.Math.Statistics.NetStandard10\HolisticWare.Core.Math.Statistics.NetStandard10.csproj">
-      <Project>{0FDC898E-8741-4788-B648-29D82717111C}</Project>
-      <Name>HolisticWare.Core.Math.Statistics.NetStandard10</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <!--
+  ==================================================================================================
+  If projects for references can be found use ProjectReferences otherwise use NuGet references
+  http://laurentkempe.com/2009/12/03/ProjectReference-with-Condition-in-your-MSBuild-project-files/
+  msbuild Choose When ProjectReference Reference Include
+  -->
+  <Choose>
+    <When Condition="! exists('..\..\..\source\HolisticWare.Core.Math.Statistics.NetStandard10\HolisticWare.Core.Math.Statistics.NetStandard10.csproj')">
+      <!-- nuget packages (dll) refs -->
+      <ItemGroup>
+        <Reference Include="HolisticWare.Core.Math.Statistics  NuGet Bait-n-Switch">
+          <HintPath>..\packages\HolisticWare.Core.Math.Statistics.2017.12.16\lib\netstandard1.1\HolisticWare.Core.Math.Statistics.dll</HintPath>
+          <Name>Xamarin.Auth.UniversalWindowsPlatfrom NuGet Bait-n-Switch</Name>
+        </Reference>
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <!-- project refs -->
+      <ItemGroup>
+        <ProjectReference Include="..\..\..\source\HolisticWare.Core.Math.Statistics.NetStandard10\HolisticWare.Core.Math.Statistics.NetStandard10.csproj">
+          <Project>{0FDC898E-8741-4788-B648-29D82717111C}</Project>
+          <Name>HolisticWare.Core.Math.Statistics.NetStandard10 Project Reference</Name>
+        </ProjectReference>
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <!--
+  If projects for references can be found use ProjectReferences otherwise use NuGet references
+  ==================================================================================================
+  -->
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

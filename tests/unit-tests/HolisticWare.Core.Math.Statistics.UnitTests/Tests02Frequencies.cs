@@ -35,7 +35,7 @@ using Core.Math.Statistics;
 
 namespace UnitTests.HolisticWare.Core.Math.Statistics
 {
-    public partial class FrequenciesTests
+    public partial class Tests02Frequencies
     {
         
         [Test()]
