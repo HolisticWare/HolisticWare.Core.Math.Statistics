@@ -12,86 +12,175 @@ namespace Core.Math.Statistics
     /// <see cref="https://en.wikipedia.org/wiki/Mode_(statistics)"/> 
     public static class IEnumerableExtensionsFrequency
     {
-        public static uint Mode(this IEnumerable<ushort> x)
+        public static List<ushort> Mode(this IEnumerable<ushort> x)
         {
             IEnumerable<KeyValuePair<ushort, uint>> frequencies = x.Frequencies();
 
-            uint mode = frequencies.FirstOrDefault().Value;
+            List<ushort> modes = new List<ushort>();
 
-            return mode;
+            uint occurences = frequencies.FirstOrDefault().Value;
+
+            foreach (KeyValuePair<ushort, uint> kvp in frequencies)
+            {
+                if (occurences == kvp.Value)
+                {
+                    modes.Add(kvp.Key);
+                }
+            }
+
+            return modes;
         }
 
-        public static uint Mode(this IEnumerable<short> x)
+        public static List<short> Mode(this IEnumerable<short> x)
         {
             IEnumerable<KeyValuePair<short, uint>> frequencies = x.Frequencies();
 
-            uint mode = frequencies.FirstOrDefault().Value;
+            List<short> modes = new List<short>();
 
-            return mode;
+            uint occurences = frequencies.FirstOrDefault().Value;
+
+            foreach (KeyValuePair<short, uint> kvp in frequencies)
+            {
+                if (occurences == kvp.Value)
+                {
+                    modes.Add(kvp.Key);
+                }
+            }
+
+            return modes;
         }
 
-        public static uint Mode(this IEnumerable<int> x)
+        public static List<int> Mode(this IEnumerable<int> x)
         {
             IEnumerable<KeyValuePair<int, uint>> frequencies = x.Frequencies();
 
-            uint mode = frequencies.FirstOrDefault().Value;
+            List<int> modes = new List<int>();
 
-            return mode;
+            uint occurences = frequencies.FirstOrDefault().Value;
+
+            foreach (KeyValuePair<int, uint> kvp in frequencies)
+            {
+                if (occurences == kvp.Value)
+                {
+                    modes.Add(kvp.Key);
+                }
+            }
+
+            return modes;
         }
 
-        public static uint Mode(this IEnumerable<uint> x)
+        public static List<uint> Mode(this IEnumerable<uint> x)
         {
             IEnumerable<KeyValuePair<uint, uint>> frequencies = x.Frequencies();
 
-            uint mode = frequencies.FirstOrDefault().Value;
+            List<uint> modes = new List<uint>();
 
-            return mode;
+            uint occurences = frequencies.FirstOrDefault().Value;
+
+            foreach (KeyValuePair<uint, uint> kvp in frequencies)
+            {
+                if (occurences == kvp.Value)
+                {
+                    modes.Add(kvp.Key);
+                }
+            }
+
+            return modes;
         }
 
-        public static uint Mode(this IEnumerable<long> x)
+        public static List<long> Mode(this IEnumerable<long> x)
         {
             IEnumerable<KeyValuePair<long, uint>> frequencies = x.Frequencies();
 
-            uint mode = frequencies.FirstOrDefault().Value;
+            List<long> modes = new List<long>();
 
-            return mode;
+            uint occurences = frequencies.FirstOrDefault().Value;
+
+            foreach(KeyValuePair<long, uint> kvp in frequencies)
+            {
+                if (occurences == kvp.Value)
+                {
+                    modes.Add(kvp.Key);   
+                }
+            }
+
+            return modes;
         }
 
-        public static uint Mode(this IEnumerable<ulong> x)
+        public static List<ulong> Mode(this IEnumerable<ulong> x)
         {
             IEnumerable<KeyValuePair<ulong, uint>> frequencies = x.Frequencies();
 
-            uint mode = frequencies.FirstOrDefault().Value;
+            List<ulong> modes = new List<ulong>();
 
-            return mode;
+            uint occurences = frequencies.FirstOrDefault().Value;
+
+            foreach (KeyValuePair<ulong, uint> kvp in frequencies)
+            {
+                if (occurences == kvp.Value)
+                {
+                    modes.Add(kvp.Key);
+                }
+            }
+
+            return modes;
         }
 
-        public static uint Mode(this IEnumerable<float> x)
+        public static List<float> Mode(this IEnumerable<float> x)
         {
             IEnumerable<KeyValuePair<float, uint>> frequencies = x.Frequencies();
 
-            uint mode = frequencies.FirstOrDefault().Value;
+            List<float> modes = new List<float>();
 
-            return mode;
+            uint occurences = frequencies.FirstOrDefault().Value;
+
+            foreach (KeyValuePair<float, uint> kvp in frequencies)
+            {
+                if (occurences == kvp.Value)
+                {
+                    modes.Add(kvp.Key);
+                }
+            }
+
+            return modes;
         }
 
-        public static uint Mode(this IEnumerable<double> x)
+        public static List<double> Mode(this IEnumerable<double> x)
         {
             IEnumerable<KeyValuePair<double, uint>> frequencies = x.Frequencies();
 
-            uint mode = frequencies.FirstOrDefault().Value;
+            List<double> modes = new List<double>();
 
-            return mode;
+            uint occurences = frequencies.FirstOrDefault().Value;
+
+            foreach (KeyValuePair<double, uint> kvp in frequencies)
+            {
+                if (occurences == kvp.Value)
+                {
+                    modes.Add(kvp.Key);
+                }
+            }
+
+            return modes;
         }
 
-        public static uint Mode(this IEnumerable<decimal> x)
+        public static List<decimal> Mode(this IEnumerable<decimal> x)
         {
             IEnumerable<KeyValuePair<decimal, uint>> frequencies = x.Frequencies();
 
-            uint mode = frequencies.FirstOrDefault().Value;
+            List<decimal> modes = new List<decimal>();
 
-            return mode;
+            uint occurences = frequencies.FirstOrDefault().Value;
+
+            foreach (KeyValuePair<decimal, uint> kvp in frequencies)
+            {
+                if (occurences == kvp.Value)
+                {
+                    modes.Add(kvp.Key);
+                }
+            }
+
+            return modes;
         }
-
    }
 }
