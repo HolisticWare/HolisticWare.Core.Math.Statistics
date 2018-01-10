@@ -123,7 +123,7 @@ Task("unit-tests")
 		{
 			NUnit3
 			(
-				"./tests/unit-tests/**/bin/**/*UnitTests*.dll", 
+				"./tests/unit-tests/**/bin/Debug/**/*UnitTests*.dll", 
 				new NUnit3Settings 
 				{
 					NoResults = true
