@@ -39,16 +39,27 @@ namespace UnitTests.HolisticWare.Core.Math.Statistics
     {
         
         [Test()]
-        public void MeanAverage()
+        public void Mode01()
         {
             List<int> data01 = new List<int> { 2, 4, 3, 5, 6, 7, 4, 4, 2, 1 };
 
-            double mean01 = data01.Mode();
+            List<int> modes01 = data01.Mode();
 
-            Assert.AreEqual(3.8, mean01, 0.1);
+            Assert.AreEqual(new List<int> { 4 }, modes01);
 
             return;
         }
 
+        [Test()]
+        public void Mode02()
+        {
+            List<int> data01 = new List<int> { 1, 2, 2, 3, 3, 4 };
+
+            List<int> modes01 = data01.Mode();
+
+            Assert.AreEqual(new List<int> { 2, 3 }, modes01);
+
+            return;
+        }
     }
 }
