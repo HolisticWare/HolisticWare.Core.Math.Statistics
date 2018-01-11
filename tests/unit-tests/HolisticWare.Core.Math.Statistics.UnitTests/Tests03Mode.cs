@@ -61,5 +61,17 @@ namespace UnitTests.HolisticWare.Core.Math.Statistics
 
             return;
         }
+
+        [Test()]
+        public void Mode03()
+        {
+            List<int> data01 = new List<int> { 1, 2, 2, 3, 3, 4,4, 5, 6 };
+
+            List<int> modes01 = data01.Mode();
+
+            Assert.AreEqual(new List<int> { 2, 3 }, modes01);
+
+            return;
+        }
     }
 }
