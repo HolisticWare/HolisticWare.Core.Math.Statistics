@@ -34,6 +34,7 @@
     <Compile Include="Tests01MeanAverage.cs" />
     <Compile Include="Tests02Frequencies.cs" />
     <Compile Include="Tests03Mode.cs" />
+    <Compile Include="DarkVaderTests\Tests20180119.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -44,6 +45,9 @@
   http://laurentkempe.com/2009/12/03/ProjectReference-with-Condition-in-your-MSBuild-project-files/
   msbuild Choose When ProjectReference Reference Include
   -->
+  <ItemGroup>
+    <Folder Include="DarkVaderTests\" />
+  </ItemGroup>
   <Choose>
     <When Condition="! exists('..\..\..\source\HolisticWare.Core.Math.Statistics.NetStandard10\HolisticWare.Core.Math.Statistics.NetStandard10.csproj')">
       <!-- nuget packages (dll) refs -->
@@ -59,7 +63,7 @@
       <ItemGroup>
         <ProjectReference Include="..\..\..\source\HolisticWare.Core.Math.Statistics.NetStandard10\HolisticWare.Core.Math.Statistics.NetStandard10.csproj">
           <Project>{0FDC898E-8741-4788-B648-29D82717111C}</Project>
-          <Name>HolisticWare.Core.Math.Statistics.NetStandard10 Project Reference</Name>
+          <Name>HolisticWare.Core.Math.Statistics.NetStandard10</Name>
         </ProjectReference>
       </ItemGroup>
     </Otherwise>
