@@ -34,7 +34,8 @@
     <Compile Include="Tests01MeanAverage.cs" />
     <Compile Include="Tests02Frequencies.cs" />
     <Compile Include="Tests03Mode.cs" />
-    <Compile Include="DarkVaderTests\Tests20180119.cs" />
+    <Compile Include="DarkVaderTests\TestsModes20180119.cs" />
+    <Compile Include="DarkVaderTests\TestsFrequencies20180119.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

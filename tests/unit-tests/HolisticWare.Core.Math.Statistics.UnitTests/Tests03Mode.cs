@@ -43,9 +43,30 @@ namespace UnitTests.HolisticWare.Core.Math.Statistics
         {
             List<int> data01 = new List<int> { 2, 4, 3, 5, 6, 7, 4, 4, 2, 1 };
 
-            List<int> modes01 = data01.Mode();
+            List<int> modes01 = data01.Modes();
 
             Assert.AreEqual(new List<int> { 4 }, modes01);
+
+
+            Stack<int> data02 = new Stack<int> (new [] { 2, 4, 3, 5, 6, 7, 4, 4, 2, 1 });
+
+            List<int> modes02 = data02.Modes();
+
+            Assert.AreEqual(new List<int> { 4 }, modes02);
+
+
+            Queue<int> data03 = new Queue<int>(new[] { 2, 4, 3, 5, 6, 7, 4, 4, 2, 1 });
+
+            List<int> modes03 = data03.Modes();
+
+            Assert.AreEqual(new List<int> { 4 }, modes03);
+
+
+            int[] data04 = new[] { 2, 4, 3, 5, 6, 7, 4, 4, 2, 1 };
+
+            List<int> modes04 = data04.Modes();
+
+            Assert.AreEqual(new List<int> { 4 }, modes04);
 
             return;
         }
@@ -55,7 +76,7 @@ namespace UnitTests.HolisticWare.Core.Math.Statistics
         {
             List<int> data01 = new List<int> { 1, 2, 2, 3, 3, 4 };
 
-            List<int> modes01 = data01.Mode();
+            List<int> modes01 = data01.Modes();
 
             Assert.AreEqual(new List<int> { 2, 3 }, modes01);
 
@@ -65,9 +86,9 @@ namespace UnitTests.HolisticWare.Core.Math.Statistics
         [Test()]
         public void Mode03()
         {
-            List<int> data01 = new List<int> { 1, 2, 2, 3, 3, 4,4, 5, 6 };
+            List<int> data01 = new List<int> { 1, 2, 2, 3, 3, 4, 5, 6 };
 
-            List<int> modes01 = data01.Mode();
+            List<int> modes01 = data01.Modes();
 
             Assert.AreEqual(new List<int> { 2, 3 }, modes01);
 

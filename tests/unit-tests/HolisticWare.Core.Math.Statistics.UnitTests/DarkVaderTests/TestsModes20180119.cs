@@ -43,9 +43,13 @@ namespace UnitTests.HolisticWare.Core.Math.Statistics
         {
             List<int> data01 = new List<int> { 1, 2, 2, 3, 3, 3, 3, 4, 4, 5 };
 
-            List<int> modes01 = data01.Mode();
+            List<int> modes01 = data01.Modes();
 
-            Assert.AreEqual(new List<int> { 3 }, modes01);
+            Assert.AreEqual
+                        (
+                            new List<int> { 3 }, 
+                            modes01
+                        );
 
             return;
         }
@@ -69,10 +73,14 @@ namespace UnitTests.HolisticWare.Core.Math.Statistics
                         );
 
             // Act
-            List<double> modes01 = data01.Mode();
+            List<double> modes01 = data01.Modes();
 
             // Assert
-            Assert.AreEqual(new List<double> { 14.7, 18.2 }, modes01);
+            Assert.That
+                        (
+                            new List<double> { 14.7, 18.2 }, 
+                            Is.EquivalentTo(modes01)
+                        );
 
             return;
         }
@@ -96,10 +104,14 @@ namespace UnitTests.HolisticWare.Core.Math.Statistics
                         );
 
             // Act
-            List<int> modes01 = data01.Mode();
+            List<int> modes01 = data01.Modes();
 
             // Assert
-            Assert.AreEqual(new List<int> { 180 }, modes01);
+            Assert.AreEqual
+                        (
+                            new List<int> { 180 }, 
+                            modes01
+                        );
 
             return;
         }
