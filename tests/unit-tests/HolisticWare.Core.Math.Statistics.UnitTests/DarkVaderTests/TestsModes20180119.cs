@@ -74,14 +74,27 @@ namespace UnitTests.HolisticWare.Core.Math.Statistics
 
             // Act
             List<double> modes01 = data01.Modes();
-
             // Assert
-            Assert.That
+            //CollectionAssert.AreEqual         // order taken into account
+                        //(
+                        //    new List<double> { 14.7, 18.2 }, 
+                        //    modes01
+                        //);
+            CollectionAssert.AreEquivalent      // only content taken into account
                         (
                             new List<double> { 14.7, 18.2 }, 
+                            modes01
+                        );
+            Assert.That
+                        (
+                            new List<double> { 14.7, 18.2 },
                             Is.EquivalentTo(modes01)
                         );
-
+            //Assert.IsTrue
+                        //(
+                        //    modes01.SequenceEqual(new List<double> { 14.7, 18.2 })
+                        //);
+            
             return;
         }
 
