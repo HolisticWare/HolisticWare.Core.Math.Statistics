@@ -96,11 +96,11 @@ namespace Core.Math.Statistics
 
             uint occurences = frequencies.FirstOrDefault().Value;
 
-            foreach(KeyValuePair<long, uint> kvp in frequencies)
+            foreach (KeyValuePair<long, uint> kvp in frequencies)
             {
                 if (occurences == kvp.Value)
                 {
-                    modes.Add(kvp.Key);   
+                    modes.Add(kvp.Key);
                 }
             }
 
@@ -182,5 +182,27 @@ namespace Core.Math.Statistics
 
             return modes;
         }
+
+        #if NETSTANDARD1_3
+        [Obsolete("Performance issue (boxing)")]
+        public static System.Collections.ArrayList Modes(this System.Collections.ArrayList x)
+        {
+            IEnumerable<KeyValuePair<object, uint>> frequencies = x.Frequencies();
+
+            System.Collections.ArrayList modes = new System.Collections.ArrayList();
+
+            uint occurences = ((KeyValuePair<object, uint>) frequencies?.ElementAt(0)).Value;
+
+            foreach (KeyValuePair<object, uint> kvp in frequencies)
+            {
+                if (occurences == kvp.Value)
+                {
+                    modes.Add(kvp.Key);
+                }
+            }
+
+            return modes;
+        }
+        #endif
    }
 }

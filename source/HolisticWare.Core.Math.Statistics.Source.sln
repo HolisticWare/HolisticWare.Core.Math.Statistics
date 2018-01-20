@@ -5,9 +5,16 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HolisticWare.Core.Math.Statistics", "HolisticWare.Core.Math.Statistics\HolisticWare.Core.Math.Statistics.shproj", "{920D7D0F-3FAE-4C77-9174-23E7A4E80E50}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.Core.Math.Statistics.NetStandard10", "HolisticWare.Core.Math.Statistics.NetStandard10\HolisticWare.Core.Math.Statistics.NetStandard10.csproj", "{0FDC898E-8741-4788-B648-29D82717111C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.Math.Statistics.NetStandard10", "HolisticWare.Core.Math.Statistics.NetStandard10\HolisticWare.Core.Math.Statistics.NetStandard10.csproj", "{0FDC898E-8741-4788-B648-29D82717111C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.Core.Math.Statistics.NetStandard11", "HolisticWare.Core.Math.Statistics.NetStandard11\HolisticWare.Core.Math.Statistics.NetStandard11.csproj", "{3C91DD3D-42EE-4872-A48F-315AC22781E5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.Math.Statistics.NetStandard11", "HolisticWare.Core.Math.Statistics.NetStandard11\HolisticWare.Core.Math.Statistics.NetStandard11.csproj", "{3C91DD3D-42EE-4872-A48F-315AC22781E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.Math.Statistics.NetStandard13", "HolisticWare.Core.Math.Statistics.NetStandard13\HolisticWare.Core.Math.Statistics.NetStandard13.csproj", "{08B313BC-CEBF-4264-9C5E-3A5D72AB299F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EB932F8B-EE6D-4B22-A59C-49B3F7ACB28F}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -26,6 +33,10 @@ Global
 		{3C91DD3D-42EE-4872-A48F-315AC22781E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C91DD3D-42EE-4872-A48F-315AC22781E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C91DD3D-42EE-4872-A48F-315AC22781E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08B313BC-CEBF-4264-9C5E-3A5D72AB299F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08B313BC-CEBF-4264-9C5E-3A5D72AB299F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08B313BC-CEBF-4264-9C5E-3A5D72AB299F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08B313BC-CEBF-4264-9C5E-3A5D72AB299F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

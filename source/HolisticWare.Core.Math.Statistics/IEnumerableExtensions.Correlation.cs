@@ -72,6 +72,9 @@ namespace Core.Math.Statistics
             #elif NETSTANDARD1_1
             double x_mean_average_arithmetic = x.AsParallel().Cast<int>().Average();
             double y_mean_average_arithmetic = y.AsParallel().Cast<int>().Average();
+            #elif NETSTANDARD1_3
+            double x_mean_average_arithmetic = x.AsParallel().Cast<int>().Average();
+            double y_mean_average_arithmetic = y.AsParallel().Cast<int>().Average();
             #endif
 
             return 
@@ -99,6 +102,9 @@ namespace Core.Math.Statistics
             double x_mean_average_arithmetic = x.Cast<long>().Average();
             double y_mean_average_arithmetic = y.Cast<long>().Average();
             #elif NETSTANDARD1_1
+            double x_mean_average_arithmetic = x.AsParallel().Cast<long>().Average();
+            double y_mean_average_arithmetic = y.AsParallel().Cast<long>().Average();
+            #elif NETSTANDARD1_3
             double x_mean_average_arithmetic = x.AsParallel().Cast<long>().Average();
             double y_mean_average_arithmetic = y.AsParallel().Cast<long>().Average();
             #endif
@@ -130,6 +136,9 @@ namespace Core.Math.Statistics
             #elif NETSTANDARD1_1
             double x_mean_average_arithmetic = x.AsParallel().Average();
             double y_mean_average_arithmetic = y.AsParallel().Average();
+            #elif NETSTANDARD1_3
+            double x_mean_average_arithmetic = x.AsParallel().Average();
+            double y_mean_average_arithmetic = y.AsParallel().Average();
             #endif
 
             return
@@ -157,6 +166,9 @@ namespace Core.Math.Statistics
             double x_mean_average_arithmetic = x.Cast<long>().Average();
             double y_mean_average_arithmetic = y.Cast<long>().Average();
             #elif NETSTANDARD1_1
+            double x_mean_average_arithmetic = x.AsParallel().Cast<long>().Average();
+            double y_mean_average_arithmetic = y.AsParallel().Cast<long>().Average();
+            #elif NETSTANDARD1_3
             double x_mean_average_arithmetic = x.AsParallel().Cast<long>().Average();
             double y_mean_average_arithmetic = y.AsParallel().Cast<long>().Average();
             #endif
@@ -189,6 +201,9 @@ namespace Core.Math.Statistics
             #elif NETSTANDARD1_1
             double x_mean_average_arithmetic = x.AsParallel().Average();
             double y_mean_average_arithmetic = y.AsParallel().Average();
+            #elif NETSTANDARD1_3
+            double x_mean_average_arithmetic = x.AsParallel().Average();
+            double y_mean_average_arithmetic = y.AsParallel().Average();
             #endif
 
             return
@@ -218,6 +233,9 @@ namespace Core.Math.Statistics
             #elif NETSTANDARD1_1
             double x_mean_average_arithmetic = x.AsParallel().Cast<double>().Average();
             double y_mean_average_arithmetic = y.AsParallel().Cast<double>().Average();
+            #elif NETSTANDARD1_3
+            double x_mean_average_arithmetic = x.AsParallel().Cast<double>().Average();
+            double y_mean_average_arithmetic = y.AsParallel().Cast<double>().Average();
             #endif
 
             return
@@ -245,6 +263,9 @@ namespace Core.Math.Statistics
             double x_mean_average_arithmetic = x.Average();
             double y_mean_average_arithmetic = y.Average();
             #elif NETSTANDARD1_1
+            double x_mean_average_arithmetic = x.AsParallel().Average();
+            double y_mean_average_arithmetic = y.AsParallel().Average();
+            #elif NETSTANDARD1_3
             double x_mean_average_arithmetic = x.AsParallel().Average();
             double y_mean_average_arithmetic = y.AsParallel().Average();
             #endif

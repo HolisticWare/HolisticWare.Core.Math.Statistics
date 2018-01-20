@@ -9,9 +9,9 @@ namespace Core.Math.Statistics
     /// <summary>
     /// Correlation
     /// </summary>
-    public static class IEnumerableExtensionsFrequencies
+    public static class IEnumerableExtensionsFrequencyDistibution
     {
-        public static IEnumerable<KeyValuePair<T, uint>> Frequencies<T>(this IEnumerable<T> x)
+        public static IEnumerable<KeyValuePair<T, uint>> FrequencyDistribution<T>(this IEnumerable<T> x)
         {
             long n = x.LongCount();
 
@@ -32,14 +32,14 @@ namespace Core.Math.Statistics
 
             IEnumerable<KeyValuePair<T, uint>> frequencies_sorted =
                 from pair in frequencies
-                    orderby pair.Value descending
+                    orderby pair.Key ascending
                     select pair
                     ;
 
             return frequencies_sorted;
         }
 
-        public static IEnumerable<KeyValuePair<ushort, uint>> Frequencies(this IEnumerable<ushort> x)
+        public static IEnumerable<KeyValuePair<ushort, uint>> FrequencyDistribution(this IEnumerable<ushort> x)
         {
             long n = x.LongCount();
 
@@ -60,14 +60,14 @@ namespace Core.Math.Statistics
 
             IEnumerable<KeyValuePair<ushort, uint>> frequencies_sorted =
                 from pair in frequencies
-                orderby pair.Value descending
+                orderby pair.Key ascending
                 select pair
                     ;
 
             return frequencies_sorted;
         }
 
-        public static IEnumerable<KeyValuePair<short, uint>> Frequencies(this IEnumerable<short> x)
+        public static IEnumerable<KeyValuePair<short, uint>> FrequencyDistribution(this IEnumerable<short> x)
         {
             long n = x.LongCount();
 
@@ -88,14 +88,14 @@ namespace Core.Math.Statistics
 
             IEnumerable<KeyValuePair<short, uint>> frequencies_sorted =
                 from pair in frequencies
-                orderby pair.Value descending
+                orderby pair.Key ascending
                 select pair
                     ;
 
             return frequencies_sorted;
         }
 
-        public static IEnumerable<KeyValuePair<int, uint>> Frequencies(this IEnumerable<int> x)
+        public static IEnumerable<KeyValuePair<int, uint>> FrequencyDistribution(this IEnumerable<int> x)
         {
             long n = x.LongCount();
 
@@ -116,14 +116,14 @@ namespace Core.Math.Statistics
 
             IEnumerable<KeyValuePair<int, uint>> frequencies_sorted =
                 from pair in frequencies
-                orderby pair.Value descending
+                orderby pair.Key ascending
                 select pair
                     ;
 
             return frequencies_sorted;
         }
 
-        public static IEnumerable<KeyValuePair<uint, uint>> Frequencies(this IEnumerable<uint> x)
+        public static IEnumerable<KeyValuePair<uint, uint>> FrequencyDistribution(this IEnumerable<uint> x)
         {
             long n = x.LongCount();
 
@@ -144,14 +144,14 @@ namespace Core.Math.Statistics
 
             IEnumerable<KeyValuePair<uint, uint>> frequencies_sorted =
                 from pair in frequencies
-                orderby pair.Value descending
+                orderby pair.Key ascending
                 select pair
                     ;
 
             return frequencies_sorted;
         }
 
-        public static IEnumerable<KeyValuePair<long, uint>> Frequencies(this IEnumerable<long> x)
+        public static IEnumerable<KeyValuePair<long, uint>> FrequencyDistribution(this IEnumerable<long> x)
         {
             long n = x.LongCount();
 
@@ -172,14 +172,14 @@ namespace Core.Math.Statistics
 
             IEnumerable<KeyValuePair<long, uint>> frequencies_sorted =
                 from pair in frequencies
-                orderby pair.Value descending
+                orderby pair.Key ascending
                 select pair
                     ;
 
             return frequencies_sorted;
         }
 
-        public static IEnumerable<KeyValuePair<ulong, uint>> Frequencies(this IEnumerable<ulong> x)
+        public static IEnumerable<KeyValuePair<ulong, uint>> FrequencyDistribution(this IEnumerable<ulong> x)
         {
             long n = x.LongCount();
 
@@ -200,14 +200,14 @@ namespace Core.Math.Statistics
 
             IEnumerable<KeyValuePair<ulong, uint>> frequencies_sorted =
                 from pair in frequencies
-                orderby pair.Value descending
+                orderby pair.Key ascending
                 select pair
                     ;
 
             return frequencies_sorted;
         }
 
-        public static IEnumerable<KeyValuePair<float, uint>> Frequencies(this IEnumerable<float> x)
+        public static IEnumerable<KeyValuePair<float, uint>> FrequencyDistribution(this IEnumerable<float> x)
         {
             long n = x.LongCount();
 
@@ -228,14 +228,14 @@ namespace Core.Math.Statistics
 
             IEnumerable<KeyValuePair<float, uint>> frequencies_sorted =
                 from pair in frequencies
-                orderby pair.Value descending
+                orderby pair.Key ascending
                 select pair
                     ;
 
             return frequencies_sorted;
         }
 
-        public static IEnumerable<KeyValuePair<double, uint>> Frequencies(this IEnumerable<double> x)
+        public static IEnumerable<KeyValuePair<double, uint>> FrequencyDistribution(this IEnumerable<double> x)
         {
             long n = x.LongCount();
 
@@ -256,14 +256,14 @@ namespace Core.Math.Statistics
 
             IEnumerable<KeyValuePair<double, uint>> frequencies_sorted =
                 from pair in frequencies
-                orderby pair.Value descending
+                orderby pair.Key ascending
                 select pair
                     ;
 
             return frequencies_sorted;
         }
 
-        public static IEnumerable<KeyValuePair<decimal, uint>> Frequencies(this IEnumerable<decimal> x)
+        public static IEnumerable<KeyValuePair<decimal, uint>> FrequencyDistribution(this IEnumerable<decimal> x)
         {
             long n = x.LongCount();
 
@@ -284,7 +284,7 @@ namespace Core.Math.Statistics
 
             IEnumerable<KeyValuePair<decimal, uint>> frequencies_sorted =
                 from pair in frequencies
-                orderby pair.Value descending
+                orderby pair.Key ascending
                 select pair
                     ;
 
@@ -293,7 +293,7 @@ namespace Core.Math.Statistics
 
         #if NETSTANDARD1_3
         [Obsolete("Performance issue (boxing)")]
-        public static IEnumerable<KeyValuePair<object, uint>> Frequencies(this System.Collections.ArrayList x)
+        public static IEnumerable<KeyValuePair<object, uint>> FrequencyDistribution(this System.Collections.ArrayList x)
         {
             long n = x.Count;
 
@@ -314,7 +314,7 @@ namespace Core.Math.Statistics
 
             IEnumerable<KeyValuePair<object, uint>> frequencies_sorted =
                 from pair in frequencies
-                orderby pair.Value descending
+                orderby pair.Key ascending
                 select pair
                     ;
 
