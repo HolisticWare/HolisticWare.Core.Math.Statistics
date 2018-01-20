@@ -29,6 +29,10 @@
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.3.9.0\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="System.Collections.NonGeneric">
+      <HintPath>..\packages\System.Collections.NonGeneric.4.3.0\lib\net46\System.Collections.NonGeneric.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Tests01MeanAverage.cs" />
@@ -36,6 +40,7 @@
     <Compile Include="Tests03Mode.cs" />
     <Compile Include="DarkVaderTests\TestsModes20180119.cs" />
     <Compile Include="DarkVaderTests\TestsFrequencies20180119.cs" />
+    <Compile Include="DarkVaderTests\TestsFrequencyDistribution20180120.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

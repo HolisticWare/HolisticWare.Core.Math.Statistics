@@ -32,12 +32,13 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Core.Math.Statistics;
+using System.Collections;
 
 namespace UnitTests.HolisticWare.Core.Math.Statistics
 {
     public partial class Tests03Mode
     {
-        
+
         [Test()]
         public void Mode01()
         {
@@ -48,7 +49,7 @@ namespace UnitTests.HolisticWare.Core.Math.Statistics
             Assert.AreEqual(new List<int> { 4 }, modes01);
 
 
-            Stack<int> data02 = new Stack<int> (new [] { 2, 4, 3, 5, 6, 7, 4, 4, 2, 1 });
+            Stack<int> data02 = new Stack<int>(new[] { 2, 4, 3, 5, 6, 7, 4, 4, 2, 1 });
 
             List<int> modes02 = data02.Modes();
 
@@ -67,6 +68,14 @@ namespace UnitTests.HolisticWare.Core.Math.Statistics
             List<int> modes04 = data04.Modes();
 
             Assert.AreEqual(new List<int> { 4 }, modes04);
+
+            ArrayList data05 = new ArrayList { 2, 4, 3, 5, 6, 7, 4, 4, 2, 1 };
+
+            #if NETSTANDARD1_3
+            List<int> modes05 = data05.Modes();
+
+            Assert.AreEqual(new List<int> { 4 }, modes05);
+            #endif
 
             return;
         }
