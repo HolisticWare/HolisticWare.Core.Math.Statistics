@@ -117,13 +117,14 @@ BuildSpec buildSpec = new BuildSpec ()
 };
 
 Task("unit-tests")
+	.IsDependentOn ("libs")
     .Does
 	(
 		() =>
 		{
 			NUnit3
 			(
-				"./tests/unit-tests/**/bin/Debug/**/*UnitTests*.dll", 
+				"./tests/unit-tests/**/bin/Release/**/*UnitTests*.dll", 
 				new NUnit3Settings 
 				{
 					NoResults = true
@@ -155,6 +156,69 @@ Task ("externals")
 		}
 	);
 
+Task("externals-build")
+    .Does
+    (
+        () => 
+        {
+            FilePathCollection files = GetFiles("./external/**/build.cake");
+            foreach(FilePath file in files)
+            {
+                Information("File: {0}", file);
+                CakeExecuteScript
+                    (
+                        file,
+                        new CakeSettings
+                        { 
+                            Verbosity = Verbosity.Diagnostic,
+                            Arguments = new Dictionary<string, string>()
+                            {
+                                //{"verbosity",   "diagnostic"},
+                                {"target",      "libs"},
+                            },
+                        }
+                    );
+            }
+
+			return;
+        }
+    );
+
+Task("nuget-restore")
+    .Does
+    (
+        () => 
+        {
+            FilePathCollection files = null;
+            
+            files = GetFiles("./externals/**/source/*.sln");
+            foreach(FilePath file in files)
+            {
+                Information("File: {0}", file);
+                NuGetRestore(file);
+            }
+            files = GetFiles("./source/**/*.sln");
+            foreach(FilePath file in files)
+            {
+                Information("File: {0}", file);
+                NuGetRestore(file);
+            }
+            files = GetFiles("./samples/**/*.sln");
+            foreach(FilePath file in files)
+            {
+                Information("File: {0}", file);
+                NuGetRestore(file);
+            }
+            files = GetFiles("./tests/**/*.sln");
+            foreach(FilePath file in files)
+            {
+                Information("File: {0}", file);
+                NuGetRestore(file);
+            }
+
+            return;
+        }
+    );
 
 Task ("clean")
 	.IsDependentOn ("clean-base")
@@ -171,5 +235,7 @@ Task ("clean")
 
 SetupXamarinBuildTasks (buildSpec, Tasks, Task);
 
-RunTarget (TARGET);
+RunTarget ("nuget-restore");
+RunTarget ("externals-build");
 RunTarget ("unit-tests");
+RunTarget (TARGET);
