@@ -1,0 +1,3 @@
+[submodule "externals/Core.Math.Intervals"]
+	path = externals/Core.Math.Intervals
+	url = https://github.com/moljac/HolisticWare.Core.Math.Intervals.git
