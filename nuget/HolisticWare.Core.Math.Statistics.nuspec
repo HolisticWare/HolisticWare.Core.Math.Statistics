@@ -17,14 +17,14 @@
 			moljac / Miljenko Cvjetko / HolisticWare / Xamarin
 		</owners>
 		<copyright>
-			Copyright 2013-2017
+			Copyright 2013-2018
 		</copyright>
 		<!--
 		SemVer - Semantic Versioning
 		http://semver.org/
 		-->
 		<version>
-			2017.012.16.0
+			2018.01.21.0
 		</version>
 		<releaseNotes>
 			Mathematical Utiltities - Statistics implementation

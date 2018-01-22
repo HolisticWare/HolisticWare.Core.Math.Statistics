@@ -9,6 +9,7 @@ Basic algorithms based on:
 *   IEnumerable<T>
 *   System.Linq extension methods
 
+## 
 
 ## TODOs / Plans
 
@@ -43,6 +44,8 @@ Basic algorithms based on:
 
         http://mathnetnumerics.codeplex.com/
         
+    *   https://www.calculatorsoup.com/calculators/statistics/
+    
     *   http://ilnumerics.net/
 
     *   http://www.ni.com/mstudio/
