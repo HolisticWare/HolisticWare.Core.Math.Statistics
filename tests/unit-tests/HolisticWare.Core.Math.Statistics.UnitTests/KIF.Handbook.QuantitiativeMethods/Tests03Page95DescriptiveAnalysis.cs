@@ -38,12 +38,8 @@ namespace UnitTests.HolisticWare.Core.Math.Statistics
 {
     public partial class Tests03Page95DescriptiveAnalysis
     {
-
-        [Test()]
-        public void Mode01()
-        {
-            List<double> x1 = new List<double> 
-            { 
+        List<double> x1 = new List<double>
+            {
                 82.61,
                 93.51,
                 78.46,
@@ -61,12 +57,21 @@ namespace UnitTests.HolisticWare.Core.Math.Statistics
                 77.95,
             };
 
+        [Test()]
+        public void Data00()
+        {
             double x1_average = x1.Average();
-            Assert.AreEqual(x1_average, 58.77, 0.001);
+            Assert.AreEqual(x1_average, 58.77, 0.01);
 
             double x1_standard_deviation = x1.StandardDeviationSample();
-            Assert.AreEqual(x1_standard_deviation, 17.63, 0.001);
+            Assert.AreEqual(x1_standard_deviation, 17.63, 0.01);
 
+            return;
+        }
+
+        [Test()]
+        public void Data01()
+        {
             List<double> x2 = new List<double>
             {
                 87.61,
@@ -86,15 +91,55 @@ namespace UnitTests.HolisticWare.Core.Math.Statistics
                 82.95,
             };
 
-            double x2_average = x1.Average();
-            Assert.AreEqual(x2_average, 63.77, 0.001);
+            double x2_average = x2.Average();
+            Assert.AreEqual(x2_average, 63.77, 0.01);
 
-            double x2_standard_deviation = x1.StandardDeviationSample();
-            Assert.AreEqual(x1_standard_deviation, 17.63, 0.001);
+            double x2_standard_deviation = x2.StandardDeviationSample();
+            Assert.AreEqual(x2_standard_deviation, 17.63, 0.01);
 
+            List<double> d1 = new List<double>();
+
+            for(int i = 0; i < x1.Count; i++)
+            {
+                d1.Add(x2[i] - x1[i]);
+            }
+
+            double d1_average = d1.Average();
+            Assert.AreEqual(d1_average, 5.0, 0.01);
+
+            double d1_standard_deviation = d1.StandardDeviationSample();
+            Assert.AreEqual(d1_standard_deviation, 0.0, 0.01);
 
             return;
         }
 
+        [Test()]
+        public void Data03()
+        {
+            List<double> x3 = new List<double>
+            {
+            };
+
+            double x3_average = x3.Average();
+            Assert.AreEqual(x3_average, 63.77, 0.01);
+
+            double x3_standard_deviation = x3.StandardDeviationSample();
+            Assert.AreEqual(x3_standard_deviation, 17.63, 0.01);
+
+            List<double> d2 = new List<double>();
+
+            for (int i = 0; i < x1.Count; i++)
+            {
+                d2.Add(x2[i] - x1[i]);
+            }
+
+            double d2_average = d2.Average();
+            Assert.AreEqual(d2_average, 5.0, 0.01);
+
+            double d2_standard_deviation = d2.StandardDeviationSample();
+            Assert.AreEqual(d2_standard_deviation, 0.0, 0.01);
+
+            return;
+        }
     }
 }
