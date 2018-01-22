@@ -41,6 +41,7 @@
     <Compile Include="DarkVaderTests\TestsModes20180119.cs" />
     <Compile Include="DarkVaderTests\TestsFrequencies20180119.cs" />
     <Compile Include="DarkVaderTests\TestsFrequencyDistribution20180120.cs" />
+    <Compile Include="KIF.Handbook.QuantitiativeMethods\Tests03Page95DescriptiveAnalysis.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -53,6 +54,7 @@
   -->
   <ItemGroup>
     <Folder Include="DarkVaderTests\" />
+    <Folder Include="KIF.Handbook.QuantitiativeMethods\" />
   </ItemGroup>
   <Choose>
     <When Condition="! exists('..\..\..\source\HolisticWare.Core.Math.Statistics.NetStandard10\HolisticWare.Core.Math.Statistics.NetStandard10.csproj')">
