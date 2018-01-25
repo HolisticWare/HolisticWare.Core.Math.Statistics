@@ -15,8 +15,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xunit", "xunit", "{B1FC9A26
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.Math.Statistics.UnitTests", "HolisticWare.Core.Math.Statistics.UnitTests\HolisticWare.Core.Math.Statistics.UnitTests.csproj", "{04F3D823-ABEA-46DD-9EC2-56C08CA074DB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "externals", "externals", "{FB78C653-41DC-4724-9C52-49AAB4BE3C62}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.Math.Statistics.NetStandard11", "..\..\source\HolisticWare.Core.Math.Statistics.NetStandard11\HolisticWare.Core.Math.Statistics.NetStandard11.csproj", "{CD938BC0-F4E0-4B59-B585-B32455B45134}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.Math.Statistics.NetStandard13", "..\..\source\HolisticWare.Core.Math.Statistics.NetStandard13\HolisticWare.Core.Math.Statistics.NetStandard13.csproj", "{94556D18-12E1-4F97-AFD7-898DA7035D51}"

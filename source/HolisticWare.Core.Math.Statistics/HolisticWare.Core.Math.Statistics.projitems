@@ -29,6 +29,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.MeanArithmetic.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.MeanGeometric.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.FrequencyDistribution.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IEnumerableExtensions.Range.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)readme.md" />

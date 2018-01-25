@@ -125,6 +125,10 @@ namespace UnitTests.HolisticWare.Core.Math.Statistics
             double d1_max = d1.Max();
             Assert.AreEqual(d1_max, 93.51, 0.01);
 
+            //var d1_range = d1.Range();
+            //Assert.AreEqual(d1_max, 93.51, 0.01);
+            //Assert.AreEqual(d1_max, 93.51, 0.01);
+
             double d1_standard_deviation = d1.StandardDeviationSample();
             Assert.AreEqual(d1_standard_deviation, 0.0, 0.01);
 
