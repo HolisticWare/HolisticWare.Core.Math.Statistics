@@ -78,7 +78,7 @@ namespace UnitTests.HolisticWare.Core.Math.Statistics
         [Test()]
         public void Data01()
         {
-            List<double> x2 = new List<double>
+            List<double> x21 = new List<double>
             {
                 87.61,
                 98.51,
@@ -97,40 +97,43 @@ namespace UnitTests.HolisticWare.Core.Math.Statistics
                 82.95,
             };
 
-            double x2_average = x2.Average();
-            Assert.AreEqual(x2_average, 63.77, 0.01);
+            double x21_average = x21.Average();
+            Assert.AreEqual(x21_average, 63.77, 0.01);
 
-            double x2_standard_deviation = x2.StandardDeviationSample();
-            Assert.AreEqual(x2_standard_deviation, 17.63, 0.01);
+            double x21_standard_deviation = x21.StandardDeviationSample();
+            Assert.AreEqual(x21_standard_deviation, 17.63, 0.01);
 
-            double x2_min = x2.Min();
-            Assert.AreEqual(x2_min, 38.65, 0.01);
+            double x21_min = x21.Min();
+            Assert.AreEqual(x21_min, 38.65, 0.01);
 
-            double x2_max = x2.Max();
-            Assert.AreEqual(x2_max, 98.51, 0.01);
+            double x21_max = x21.Max();
+            Assert.AreEqual(x21_max, 98.51, 0.01);
 
             List<double> d1 = new List<double>();
 
             for(int i = 0; i < x1.Count; i++)
             {
-                d1.Add(x2[i] - x1[i]);
+                d1.Add(x21[i] - x1[i]);
             }
 
             double d1_average = d1.Average();
             Assert.AreEqual(d1_average, 5.0, 0.01);
 
             double d1_min = d1.Min();
-            Assert.AreEqual(d1_min, 33.65, 0.01);
+            Assert.AreEqual(d1_min, 5.0, 0.01);
 
             double d1_max = d1.Max();
-            Assert.AreEqual(d1_max, 93.51, 0.01);
+            Assert.AreEqual(d1_max, 5.0, 0.01);
 
             //var d1_range = d1.Range();
             //Assert.AreEqual(d1_max, 93.51, 0.01);
             //Assert.AreEqual(d1_max, 93.51, 0.01);
 
-            double d1_standard_deviation = d1.StandardDeviationSample();
-            Assert.AreEqual(d1_standard_deviation, 0.0, 0.01);
+            double d1_standard_deviation_sample = d1.StandardDeviationSample();
+            Assert.AreEqual(d1_standard_deviation_sample, 0.0, 0.01);
+
+            double d1_standard_deviation_population = d1.StandardDeviationPopulation();
+            Assert.AreEqual(d1_standard_deviation_population, 0.0, 0.01);
 
             return;
         }
@@ -138,7 +141,7 @@ namespace UnitTests.HolisticWare.Core.Math.Statistics
         [Test()]
         public void Data02()
         {
-            List<double> x3 = new List<double>
+            List<double> x22 = new List<double>
             {
                 83.98,
                 94.31,
@@ -157,33 +160,33 @@ namespace UnitTests.HolisticWare.Core.Math.Statistics
                 80.21,
             };
 
-            double x3_average = x3.Average();
-            Assert.AreEqual(x3_average, 63.86, 0.01);
+            double x22_average = x22.Average();
+            Assert.AreEqual(x22_average, 63.86, 0.01);
 
-            double x3_standard_deviation = x3.StandardDeviationSample();
-            Assert.AreEqual(x3_standard_deviation, 15.67, 0.01);
+            double x22_standard_deviation = x22.StandardDeviationSample();
+            Assert.AreEqual(x22_standard_deviation, 15.67, 0.01);
 
-            double x3_min = x3.Min();
-            Assert.AreEqual(x3_min, 39.51, 0.01);
+            double x22_min = x22.Min();
+            Assert.AreEqual(x22_min, 39.51, 0.01);
 
-            double x3_max = x3.Max();
-            Assert.AreEqual(x3_max, 94.31, 0.01);
+            double x22_max = x22.Max();
+            Assert.AreEqual(x22_max, 94.31, 0.01);
 
             List<double> d2 = new List<double>();
 
             for (int i = 0; i < x1.Count; i++)
             {
-                d2.Add(x3[i] - x1[i]);
+                d2.Add(x22[i] - x1[i]);
             }
 
             double d2_average = d2.Average();
             Assert.AreEqual(d2_average, 5.08, 0.01);
 
             double d2_min = d2.Min();
-            Assert.AreEqual(d2_min, 33.65, 0.01);
+            Assert.AreEqual(d2_min, 0.8, 0.01);
 
             double d2_max = d2.Max();
-            Assert.AreEqual(d2_max, 93.51, 0.01);
+            Assert.AreEqual(d2_max, 9.68, 0.01);
 
             double d2_standard_deviation = d2.StandardDeviationSample();
             Assert.AreEqual(d2_standard_deviation, 3.01, 0.01);
@@ -194,7 +197,7 @@ namespace UnitTests.HolisticWare.Core.Math.Statistics
         [Test()]
         public void Data03()
         {
-            List<double> x4 = new List<double>
+            List<double> x23 = new List<double>
             {
                 85.65,
                 94.62,
@@ -213,36 +216,37 @@ namespace UnitTests.HolisticWare.Core.Math.Statistics
                 82.21,
             };
 
-            double x4_average = x4.Average();
-            Assert.AreEqual(x4_average, 64.32, 0.01);
+            double x23_average = x23.Average();
+            Assert.AreEqual(x23_average, 64.32, 0.01);
 
-            double x4_standard_deviation = x4.StandardDeviationSample();
-            Assert.AreEqual(x4_standard_deviation, 17.73, 0.01);
+            double x23_standard_deviation = x23.StandardDeviationSample();
+            Assert.AreEqual(x23_standard_deviation, 17.73, 0.01);
 
-            double x4_min = x4.Min();
-            Assert.AreEqual(x4_min, 33.95, 0.01);
+            double x23_min = x23.Min();
+            Assert.AreEqual(x23_min, 33.95, 0.01);
 
-            double x4_max = x4.Max();
-            Assert.AreEqual(x4_max, 94.62, 0.01);
+            double x23_max = x23.Max();
+            Assert.AreEqual(x23_max, 94.62, 0.01);
 
             List<double> d3 = new List<double>();
 
             for (int i = 0; i < x1.Count; i++)
             {
-                d3.Add(x4[i] - x1[i]);
+                d3.Add(x23[i] - x1[i]);
             }
 
             double d3_average = d3.Average();
             Assert.AreEqual(d3_average, 5.54, 0.01);
 
             double d3_min = d3.Min();
-            Assert.AreEqual(d3_min, 33.65, 0.01);
+            Assert.AreEqual(d3_min, 0.3, 0.01);
 
             double d3_max = d3.Max();
-            Assert.AreEqual(d3_max, 93.51, 0.01);
+            Assert.AreEqual(d3_max, 11.56, 0.01);
 
             double d3_standard_deviation = d3.StandardDeviationSample();
             Assert.AreEqual(d3_standard_deviation, 3.79, 0.01);
+
 
             return;
         }
