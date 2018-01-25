@@ -119,6 +119,12 @@ namespace UnitTests.HolisticWare.Core.Math.Statistics
             double d1_average = d1.Average();
             Assert.AreEqual(d1_average, 5.0, 0.01);
 
+            double d1_min = d1.Min();
+            Assert.AreEqual(d1_min, 33.65, 0.01);
+
+            double d1_max = d1.Max();
+            Assert.AreEqual(d1_max, 93.51, 0.01);
+
             double d1_standard_deviation = d1.StandardDeviationSample();
             Assert.AreEqual(d1_standard_deviation, 0.0, 0.01);
 
@@ -169,6 +175,12 @@ namespace UnitTests.HolisticWare.Core.Math.Statistics
             double d2_average = d2.Average();
             Assert.AreEqual(d2_average, 5.08, 0.01);
 
+            double d2_min = d2.Min();
+            Assert.AreEqual(d2_min, 33.65, 0.01);
+
+            double d2_max = d2.Max();
+            Assert.AreEqual(d2_max, 93.51, 0.01);
+
             double d2_standard_deviation = d2.StandardDeviationSample();
             Assert.AreEqual(d2_standard_deviation, 3.01, 0.01);
 
@@ -209,18 +221,24 @@ namespace UnitTests.HolisticWare.Core.Math.Statistics
             double x4_max = x4.Max();
             Assert.AreEqual(x4_max, 94.62, 0.01);
 
-            List<double> d4 = new List<double>();
+            List<double> d3 = new List<double>();
 
             for (int i = 0; i < x1.Count; i++)
             {
-                d4.Add(x4[i] - x1[i]);
+                d3.Add(x4[i] - x1[i]);
             }
 
-            double d4_average = d4.Average();
-            Assert.AreEqual(d4_average, 5.54, 0.01);
+            double d3_average = d3.Average();
+            Assert.AreEqual(d3_average, 5.54, 0.01);
 
-            double d4_standard_deviation = d4.StandardDeviationSample();
-            Assert.AreEqual(d4_standard_deviation, 3.79, 0.01);
+            double d3_min = d3.Min();
+            Assert.AreEqual(d3_min, 33.65, 0.01);
+
+            double d3_max = d3.Max();
+            Assert.AreEqual(d3_max, 93.51, 0.01);
+
+            double d3_standard_deviation = d3.StandardDeviationSample();
+            Assert.AreEqual(d3_standard_deviation, 3.79, 0.01);
 
             return;
         }
