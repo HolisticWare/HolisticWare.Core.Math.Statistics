@@ -45,6 +45,7 @@
     <Compile Include="DarkVaderTests\TestsFrequencies20180119.cs" />
     <Compile Include="DarkVaderTests\TestsFrequencyDistribution20180120.cs" />
     <Compile Include="KIF.Handbook.QuantitiativeMethods\Tests03Page95DescriptiveAnalysis.cs" />
+    <Compile Include="DarkVaderTests\My_UT.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
