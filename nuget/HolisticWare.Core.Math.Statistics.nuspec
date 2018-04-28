@@ -26,14 +26,28 @@
 		<version>
 			2018.01.21.0
 		</version>
-		<releaseNotes>
-			Mathematical Utiltities - Statistics implementation
+		<description>
+			Mathematical Utiltities - Statistics (Descriptive Statitstics) Algorithms
 
-			Functionality Added - MeanArithmetic, MeanGeometric, Mode
-			Platform Added - .NET Standard 1.1 and Parallel Linq algorithms!
+			Xplat (cross platform) .NET Standard implementations 
+
+			Metapackage including:
+
+			HolisticWare.Core.Math.Statistics.Descriptive.Sequential (netstandard1.0)
+			HolisticWare.Core.Math.Statistics.Descriptive.Parallel (netstandard1.1)
+		</description>
+		<releaseNotes>
+			Implementation split into 2 nugets (Sequential and Parallel)
 		</releaseNotes>
+		<summary>
+			Mathematical Utiltities - Statistics implementation
+		</summary>
+		<tags>
+			Math, Statistics, Descriptive, IEnumerable&lt;T&gt;, Sequential
+			.NET Standard 1.0, netstandard1.0
+		</tags>
 		<licenseUrl>
-			https://github.com/moljac/HolisticWare.Core.Math.Statistics/blob/master/LICENSE
+			https://github.com/moljac/HolisticWare.Core.Math.Statistics/blob/master/LICENSE.md
 		</licenseUrl>
 		<projectUrl>
 			https://github.com/moljac/HolisticWare.Core.Math.Statistics
@@ -44,31 +58,6 @@
 		<requireLicenseAcceptance>
 			false
 		</requireLicenseAcceptance>
-		<description>
-			Xplat (cross platform) implementation of Statistics algorithms
-
-			.NET Standard 1.0 (netstandard1.0)
-			.NET Standard 1.1 (netstandard1.1) with Parallel Linq algorithms
-		</description>
-		<summary>
-			Mathematical Utiltities - Statistics implementation
-		</summary>
-		<tags>
-			xamarin,
-			pcl,
-			android, monoandroid, monodroid, xamarin.android,
-			ios,  monotouch, xamarin.ios
-			windows phone, winphone, wp, 
-			windows phone 8 silverlight, winphone 8 sl, wp8 sl
-			windows phone 8.1 silverlight, winphone 8.1 sl, wp81 sl
-			windows 8.1, windows 8.1 winrt, win81
-			windows phone 8.1 winrt, winphone 8.1 winrt, wpa81
-			universal windows platform, uwp, windows 10
-			plugin for xamarin, plugin,
-			xamarin.forms,
-			<!--
-			-->
-		</tags>
 		<frameworkAssemblies>
 			<!--
 			<frameworkAssembly
@@ -88,11 +77,18 @@
 		<dependencies> 
 			<!--
 			https://docs.microsoft.com/en-us/nuget/schema/nuspec#dependencies
-
+			-->
 			<group>
-				<dependency id="Microsoft.Bcl.Build" version="1.0.21" />
-				<dependency id="PCLCrypto" version="[2.0.147,)"/>
+				<dependency 
+					id="HolisticWare.Core.Math.Statistics.Descriptive.Sequential" 
+					version="2018.01.28" 
+					/>
+				<dependency 
+					id="HolisticWare.Core.Math.Statistics.Descriptive.Parallel" 
+					version="2018.01.28" 
+					/>
 			</group>
+			<!-->
 			<group targetFramework="MonoAndroid10">
 				<dependency id="Xamarin.Android.Support.CustomTabs" version="[23.3.0,)" />
 			</group>
@@ -107,18 +103,12 @@
 		-->
 		<!--
 			Core - Portable
+		<file
+			src="output/netstandard1.0/HolisticWare.Core.Math.Statistics.Descriptive.Sequential.dll"
+			target="lib/netstandard1.0/HolisticWare.Core.Math.Statistics.Descriptive.Sequential.dll"
+			>
+		</file>
 		-->
-		<file
-			src="output/netstandard1.0/HolisticWare.Core.Math.Statistics.dll"
-			target="lib/netstandard1.0/HolisticWare.Core.Math.Statistics.dll"
-			>
-		</file>
-		<file
-			src="output/netstandard1.1/HolisticWare.Core.Math.Statistics.dll"
-			target="lib/netstandard1.1/HolisticWare.Core.Math.Statistics.dll"
-			>
-		</file>
-
 
 		<!--
 			Xamarin.Android
